@@ -62,3 +62,31 @@ h3 {
     background:radial-gradient(#1e3e4d, #102028);
     background: radial-gradient(circle 400px,#1e3e4d, #102028);
 }
+
+@font-face {
+    font-family: 'DroidSerifRegula';
+    src: url('DroidSerif.eot');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: DroidSerifRegular, Georgia, 'Times New Roman', serif ;
+}
+
+img {
+    transform: translate(20px, 40px);
+    transform: rotate(15deg);
+    transform: scale(1.5);
+    transform: skewX(45deg);
+    transform: skewY(-15deg);
+}
+
+.element {
+    background-color: #c44743;
+    transition : background-color 0.6s linear 0.1s;
+}
+
+.element:hover {
+    background-color: #d56d68;
+}
