@@ -97,11 +97,25 @@ jQuery(document).ready(function() {
 
 
     $("#nights").on("keyup", function() {
+        // the + convert the string to a number
         var nights = +$(this).val();
         var dailyPrice = +$(this).closest(".tour").data("daily-price");
         $("#total").text(nights * dailyPrice);
         $("#nights-count").text($(this).val());
     }).on("focus", function() {
         $(this).val(7);
+    });
+});
+
+// Css manipulations
+$(document).ready(function() {
+    $(".tour").on("mouseenter", function() {
+        $(this).css({"background-color": "#252b30", "font-weight": "bold"});
+        $(this).find(".photos").show();
+        $(this).addClass('highlight');
+        $(this).find(".per-night").animate({"top": "-14px", "opacity": "1"}, "fast");
+    }).on('mouseleave', function() {
+        $(this).removeClass('highlight');
+        $(this).find(".per-night").animate({top: "0", opacity: 0}, "fast");
     });
 });
