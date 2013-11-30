@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page to call js functions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script>
+            var puzzlers = [
+                function(a) {
+                    return 8 * a - 10;
+                },
+                function(a) {
+                    return (a - 3) * (a - 3) * (a - 3);
+                },
+                function(a) {
+                    return a * a + 4;
+                },
+                function(a) {
+                    return a % 5;
+                }
+            ];
+            var start = 2;
+            var applyAndEmpty = function(number, functions) {
+                while (functions.length > 0) {
+                    number = functions.shift()(number);
+                }
+                return number;
+            };
+            alert("Resultat " + applyAndEmpty(start, puzzlers));
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>
