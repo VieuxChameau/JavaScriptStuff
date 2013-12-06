@@ -1,4 +1,4 @@
-{
+{ // 31.1
     var runAway = function() {
         var toAlert = "";
         for (var i = 0; i < 5; i++) {
@@ -47,7 +47,7 @@
     }
 }
 
-{
+{ // 31.2 functions expressions as parameters
     var passengers = [["Thomas", "Meeks"],
         ["Gregg", "Pollack"],
         ["Christine", "Wong"],
@@ -81,7 +81,7 @@
         }];
 }
 
-{
+{ // 31.3 returned functions expressions and call
     function adventureSelector(userChoice) {
         if (userChoice == 1) {
             return function() {
